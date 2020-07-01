@@ -2,8 +2,8 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
+import Link from 'next/Link'
 import ProTip from '../organisms/Protip'
-import Link from '../organisms/Link'
 import Copyright from '../templates/Coryright'
 
 export default function About(): React.ReactElement {
