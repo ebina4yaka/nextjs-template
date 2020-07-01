@@ -7,11 +7,9 @@ export default function Copyright(): React.ReactElement {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <MuiLink color="inherit" href="https://material-ui.com/">
-        Your Website
+        {' Your Website '}
       </MuiLink>
-      {' '}
-      {new Date().getFullYear()}
-      .
+      {`${new Date().getFullYear()}.`}
     </Typography>
   )
 }
