@@ -2,12 +2,36 @@
 import React from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from '../theme'
+import Container from '@material-ui/core/Container'
+import {
+  createMuiTheme,
+  makeStyles,
+  ThemeProvider,
+} from '@material-ui/core/styles'
+import Box from '@material-ui/core/Box'
+import { useMediaQuery } from '@material-ui/core'
+
+const useStyles = makeStyles({
+  component: {
+    textAlign: 'center',
+  },
+})
 
 export default function MyApp(props: AppProps): React.ReactElement {
   const { Component, pageProps } = props
+  const classes = useStyles()
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+
+  const theme = React.useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          type: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode]
+  )
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -21,16 +45,17 @@ export default function MyApp(props: AppProps): React.ReactElement {
   return (
     <>
       <Head>
-        <title>My page</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        <title>App</title>
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <header />
+        <Container maxWidth="lg">
+          <Box my={4} className={classes.component}>
+            <Component {...pageProps} />
+          </Box>
+        </Container>
+        <footer />
       </ThemeProvider>
     </>
   )
