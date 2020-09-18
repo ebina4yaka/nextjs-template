@@ -46,6 +46,10 @@ export default function MyApp(props: AppProps): React.ReactElement {
     <>
       <Head>
         <title>App</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
