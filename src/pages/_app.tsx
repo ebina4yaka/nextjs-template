@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import { useMediaQuery } from '@material-ui/core'
+import 'typeface-roboto'
 
 const useStyles = makeStyles({
   component: {
@@ -50,6 +51,7 @@ export default function MyApp(props: AppProps): React.ReactElement {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <style type="text/css">{`body { font-family: 'Roboto' }`}</style>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
