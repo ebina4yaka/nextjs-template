@@ -3,25 +3,12 @@ import React from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Container from '@material-ui/core/Container'
-import {
-  createMuiTheme,
-  makeStyles,
-  ThemeProvider,
-} from '@material-ui/core/styles'
-import Box from '@material-ui/core/Box'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { useMediaQuery } from '@material-ui/core'
 import 'typeface-roboto'
 
-const useStyles = makeStyles({
-  component: {
-    textAlign: 'center',
-  },
-})
-
 export default function MyApp(props: AppProps): React.ReactElement {
   const { Component, pageProps } = props
-  const classes = useStyles()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
 
   const theme = React.useMemo(
@@ -55,13 +42,7 @@ export default function MyApp(props: AppProps): React.ReactElement {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <header />
-        <Container maxWidth="lg">
-          <Box my={4} className={classes.component}>
-            <Component {...pageProps} />
-          </Box>
-        </Container>
-        <footer />
+        <Component {...pageProps} />
       </ThemeProvider>
     </>
   )
