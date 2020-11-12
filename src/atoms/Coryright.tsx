@@ -1,8 +1,8 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
 import MuiLink from '@material-ui/core/Link'
 
-export default function Copyright(): React.ReactElement {
+export default function Copyright(): ReactElement {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react'
+import { ReactElement, useEffect, useMemo } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -7,11 +7,11 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { useMediaQuery } from '@material-ui/core'
 import 'typeface-roboto'
 
-export default function MyApp(props: AppProps): React.ReactElement {
+export default function MyApp(props: AppProps): ReactElement {
   const { Component, pageProps } = props
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createMuiTheme({
         palette: {
@@ -21,7 +21,7 @@ export default function MyApp(props: AppProps): React.ReactElement {
     [prefersDarkMode]
   )
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
