@@ -1,15 +1,18 @@
+import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
-import { Box, Container } from '@material-ui/core'
+import { Box, Container, createStyles } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Copyright from '../atoms/Coryright'
 
-const useStyles = makeStyles({
-  component: {
-    textAlign: 'center',
-  },
-})
+const useStyles = makeStyles(
+  createStyles({
+    component: {
+      textAlign: 'center',
+    },
+  })
+)
 
-export default function Index(): React.ReactElement {
+export default function Index(): ReactElement {
   const classes = useStyles()
   return (
     <Container maxWidth="lg">
