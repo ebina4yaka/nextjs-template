@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import DarkModeToggle from '../atoms/DarkModeToggle'
+import DarkModeToggle from '../molecules/DarkModeToggle'
 
 export default function Navbar(): ReactElement {
   return (
