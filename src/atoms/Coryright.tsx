@@ -5,13 +5,13 @@ export default function Copyright(): ReactElement {
     <div className="font-sans text-base">
       {'Copyright © '}
       <a
-        href="https://material-ui.com/"
+        href="https://github.com/ebina4yaka"
         target="_blank"
         rel="noreferrer noopener"
       >
-        {' Your Website '}
+        ebina4yaka
       </a>
-      {`${new Date().getFullYear()}.`}
+      {` ${new Date().getFullYear()}.`}
     </div>
   )
 }

@@ -2,7 +2,7 @@
 import { ReactElement, useEffect } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import 'tailwindcss/tailwind.css'
+import '../styles/globals.css'
 
 export default function MyApp(props: AppProps): ReactElement {
   const { Component, pageProps } = props

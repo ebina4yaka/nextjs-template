@@ -1,17 +1,25 @@
 import { ReactElement } from 'react'
 import Copyright from '../atoms/Coryright'
+import Navbar from '../organisms/Navbar'
 
 export default function Index(): ReactElement {
   return (
-    <div className="lg:container mx-auto">
-      <div className="md:box-content">
-        <div className="font-sans text-4xl">
-          Next.js with TypeScript example
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <div className="lg:container mx-auto">
+          <div className="md:box-content">
+            <div className="font-sans text-4xl text-center m-10">
+              This is Title
+            </div>
+          </div>
         </div>
-        <footer>
-          <Copyright />
-        </footer>
-      </div>
-    </div>
+      </main>
+      <footer className="text-center">
+        <Copyright />
+      </footer>
+    </>
   )
 }
