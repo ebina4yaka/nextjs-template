@@ -1,15 +1,13 @@
 import { ReactElement } from 'react'
-import Typography from '@material-ui/core/Typography'
-import MuiLink from '@material-ui/core/Link'
 
 export default function Copyright(): ReactElement {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <div className="font-sans text-base">
       {'Copyright © '}
-      <MuiLink color="inherit" href="https://material-ui.com/">
+      <a href="https://material-ui.com/" target="_blank">
         {' Your Website '}
-      </MuiLink>
+      </a>
       {`${new Date().getFullYear()}.`}
-    </Typography>
+    </div>
   )
 }
