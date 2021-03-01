@@ -8,7 +8,9 @@ export default function Index(): ReactElement {
         <div className="font-sans text-4xl">
           Next.js with TypeScript example
         </div>
-        <Copyright />
+        <footer>
+          <Copyright />
+        </footer>
       </div>
     </div>
   )
