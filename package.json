@@ -20,11 +20,6 @@
     "test:coverage": "jest --collect-coverage",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{ts,tsx}": "yarn lint"
   },
