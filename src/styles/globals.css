@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.hamburger-button {
+    @apply inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+}
+
 .navbar {
     @apply bg-white dark:bg-gray-800
 }
@@ -27,7 +31,7 @@
 }
 
 .navbar-no-selected {
-    @apply text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white dark:bg-gray-800 dark:hover:bg-white dark:hover:text-black
+    @apply text-black hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium dark:text-white
 }
 
 .toggle-checkbox {
