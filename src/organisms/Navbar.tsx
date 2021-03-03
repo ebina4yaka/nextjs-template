@@ -1,4 +1,5 @@
 import { ReactElement, useState } from 'react'
+import Link from 'next/link'
 import DarkModeToggle from '../molecules/DarkModeToggle'
 
 export default function Navbar(): ReactElement {
@@ -54,18 +55,18 @@ export default function Navbar(): ReactElement {
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <a href="/" className="navbar-selected">
-                  Dashboard
-                </a>
-                <a href="/" className="navbar-no-selected">
-                  Team
-                </a>
-                <a href="/" className="navbar-no-selected">
-                  Projects
-                </a>
-                <a href="/" className="navbar-no-selected">
-                  Calendar
-                </a>
+                <div className="navbar-selected">
+                  <Link href="/">Dashboard</Link>
+                </div>
+                <div className="navbar-no-selected">
+                  <Link href="/">Team</Link>
+                </div>
+                <div className="navbar-no-selected">
+                  <Link href="/">Projects</Link>
+                </div>
+                <div className="navbar-no-selected">
+                  <Link href="/">Calendar</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -80,18 +81,18 @@ export default function Navbar(): ReactElement {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <a href="/" className="navbar-selected block">
-            Dashboard
-          </a>
-          <a href="/" className="navbar-no-selected block">
-            Team
-          </a>
-          <a href="/" className="navbar-no-selected block">
-            Projects
-          </a>
-          <a href="/" className="navbar-no-selected block">
-            Calendar
-          </a>
+          <div className="navbar-selected block">
+            <Link href="/">Dashboard</Link>
+          </div>
+          <div className="navbar-no-selected block">
+            <Link href="/">Team</Link>
+          </div>
+          <div className="navbar-no-selected block">
+            <Link href="/">Projects</Link>
+          </div>
+          <div className="navbar-no-selected block">
+            <Link href="/">Calendar</Link>
+          </div>
         </div>
       </div>
     </nav>
