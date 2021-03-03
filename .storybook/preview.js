@@ -1,3 +1,5 @@
+import '../src/styles/globals.css'
+
 require('@storybook/react').addParameters({
   options: {
     storySort: (a, b) =>
