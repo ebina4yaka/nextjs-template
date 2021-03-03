@@ -24,7 +24,6 @@ export default function MyApp(props: AppProps): ReactElement {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <style type="text/css">{`body { font-family: 'Roboto' }`}</style>
       </Head>
       <Component {...pageProps} />
     </>
