@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for Dashboard 1`] = `
+Array [
+  <header>
+    <MockNavbar />
+  </header>,
+  <main>
+    <div
+      className="lg:container mx-auto"
+    >
+      <div
+        className="md:box-content"
+      >
+        <div
+          className="font-sans text-4xl text-center m-10"
+        >
+          This is Title
+        </div>
+      </div>
+    </div>
+  </main>,
+  <footer
+    className="text-center"
+  >
+    <MockCopyright />
+  </footer>,
+]
+`;

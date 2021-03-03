@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for Navbar 1`] = `
+<nav
+  className="navbar"
+>
+  <div
+    className="navbar-size"
+  >
+    <div
+      className="navbar-content"
+    >
+      <div
+        className="navbar-left"
+      >
+        <div
+          className="absolute inset-y-0 left-0 flex items-center sm:hidden"
+        >
+          <button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            className="hamburger-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="sr-only"
+            >
+              Open main menu
+            </span>
+            <svg
+              aria-hidden="true"
+              className="block h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="hidden h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="flex-shrink-0 flex items-center"
+        >
+          <div
+            className="text-2xl font-semibold"
+          >
+            Logo
+          </div>
+        </div>
+        <div
+          className="hidden sm:block sm:ml-6"
+        >
+          <div
+            className="flex space-x-4"
+          >
+            <div
+              className="navbar-selected"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Dashboard
+            </div>
+            <div
+              className="navbar-no-selected"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Team
+            </div>
+            <div
+              className="navbar-no-selected"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Projects
+            </div>
+            <div
+              className="navbar-no-selected"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              Calendar
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="navbar-right"
+      >
+        <MockDarkModeToggle />
+      </div>
+    </div>
+  </div>
+  <div
+    className="sm:hidden hidden"
+    id="mobile-menu"
+  >
+    <div
+      className="px-2 pt-2 pb-3 space-y-1"
+    >
+      <div
+        className="navbar-selected block"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Dashboard
+      </div>
+      <div
+        className="navbar-no-selected block"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Team
+      </div>
+      <div
+        className="navbar-no-selected block"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Projects
+      </div>
+      <div
+        className="navbar-no-selected block"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Calendar
+      </div>
+    </div>
+  </div>
+</nav>
+`;

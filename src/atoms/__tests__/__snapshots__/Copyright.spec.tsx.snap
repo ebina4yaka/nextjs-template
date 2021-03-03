@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for Copyright 1`] = `
+<div
+  className="font-sans text-base"
+>
+  Copyright © 
+  <a
+    href="https://github.com/ebina4yaka"
+    rel="noreferrer noopener"
+    target="_blank"
+  >
+    ebina4yaka
+  </a>
+   2016.
+</div>
+`;

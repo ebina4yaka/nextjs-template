@@ -11,7 +11,7 @@ export default function Copyright(): ReactElement {
       >
         ebina4yaka
       </a>
-      {` ${new Date().getFullYear()}.`}
+      {` ${new Date(Date.now()).getFullYear()}.`}
     </div>
   )
 }
