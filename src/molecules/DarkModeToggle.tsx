@@ -15,7 +15,7 @@ export default function DarkModeToggle(): ReactElement {
       document.documentElement.classList.remove('dark')
       setDarkMode(false)
     }
-  })
+  }, [])
 
   const handleChange = () => {
     if (document.documentElement.classList.contains('dark')) {
