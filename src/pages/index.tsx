@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import Copyright from '../atoms/Coryright'
+import Copyright from '../atoms/Copyright'
 import Navbar from '../organisms/Navbar'
 
 export default function Index(): ReactElement {

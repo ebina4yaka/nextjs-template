@@ -13,3 +13,8 @@
 .toggle-label {
     @apply block h-6 align-middle overflow-hidden text-gray-200 bg-gray-200 rounded-full cursor-pointer dark:text-gray-400 dark:bg-gray-400 dark:border-gray-400 border-gray-200 border-2;
 }
+
+/* For Storybook */
+.dark {
+    @apply text-white;
+}
