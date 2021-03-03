@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.hamburger-button {
+    @apply inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+}
+
+.navbar {
+    @apply bg-white dark:bg-gray-800
+}
+
+.navbar-size {
+    @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8
+}
+
+.navbar-content {
+    @apply relative flex items-center justify-between h-16
+}
+
+.navbar-left {
+    @apply flex-1 flex items-center justify-center sm:items-stretch sm:justify-start
+}
+
+.navbar-right {
+    @apply absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0
+}
+
+.navbar-selected {
+    @apply bg-gray-200 text-black px-3 py-2 rounded-md text-sm font-medium dark:bg-gray-900 dark:text-white
+}
+
+.navbar-no-selected {
+    @apply text-black hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium dark:text-white
+}
+
 .toggle-checkbox {
     @apply absolute block w-6 h-6 dark:bg-white border-4 dark:border-gray-400 rounded-full appearance-none cursor-pointer focus:outline-none bg-gray-800 border-gray-200;
 }
