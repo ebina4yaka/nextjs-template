@@ -27,11 +27,11 @@
 }
 
 .navbar-selected {
-    @apply bg-gray-200 text-black px-3 py-2 rounded-md text-sm font-medium dark:bg-gray-900 dark:text-white
+    @apply bg-gray-200 text-black px-3 py-2 rounded-md text-sm font-medium dark:bg-gray-900 dark:text-white cursor-pointer
 }
 
 .navbar-no-selected {
-    @apply text-black hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium dark:text-white
+    @apply text-black hover:text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium dark:text-white cursor-pointer
 }
 
 .toggle-checkbox {
