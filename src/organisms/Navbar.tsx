@@ -1,9 +1,12 @@
 import { ReactElement, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import DarkModeToggle from '../molecules/DarkModeToggle'
 
 export default function Navbar(): ReactElement {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  const router = useRouter()
+
   return (
     <nav className="navbar">
       <div className="navbar-size">
@@ -55,18 +58,50 @@ export default function Navbar(): ReactElement {
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <div className="navbar-selected">
-                  <Link href="/">Dashboard</Link>
-                </div>
-                <div className="navbar-no-selected">
-                  <Link href="/">Team</Link>
-                </div>
-                <div className="navbar-no-selected">
-                  <Link href="/">Projects</Link>
-                </div>
-                <div className="navbar-no-selected">
-                  <Link href="/">Calendar</Link>
-                </div>
+                <Link href="/">
+                  <div
+                    className={
+                      router.pathname === '/'
+                        ? 'navbar-selected'
+                        : 'navbar-no-selected'
+                    }
+                  >
+                    Dashboard
+                  </div>
+                </Link>
+                <Link href="/team">
+                  <div
+                    className={
+                      router.pathname.match(/^\/team/)
+                        ? 'navbar-selected'
+                        : 'navbar-no-selected'
+                    }
+                  >
+                    Team
+                  </div>
+                </Link>
+                <Link href="/projects">
+                  <div
+                    className={
+                      router.pathname.match(/^\/projects/)
+                        ? 'navbar-selected'
+                        : 'navbar-no-selected'
+                    }
+                  >
+                    Projects
+                  </div>
+                </Link>
+                <Link href="/calendar">
+                  <div
+                    className={
+                      router.pathname.match(/^\/calendar/)
+                        ? 'navbar-selected'
+                        : 'navbar-no-selected'
+                    }
+                  >
+                    Calendar
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -81,18 +116,50 @@ export default function Navbar(): ReactElement {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <div className="navbar-selected block">
-            <Link href="/">Dashboard</Link>
-          </div>
-          <div className="navbar-no-selected block">
-            <Link href="/">Team</Link>
-          </div>
-          <div className="navbar-no-selected block">
-            <Link href="/">Projects</Link>
-          </div>
-          <div className="navbar-no-selected block">
-            <Link href="/">Calendar</Link>
-          </div>
+          <Link href="/">
+            <div
+              className={
+                router.pathname === '/'
+                  ? 'navbar-selected block'
+                  : 'navbar-no-selected block'
+              }
+            >
+              Dashboard
+            </div>
+          </Link>
+          <Link href="/team">
+            <div
+              className={
+                router.pathname.match(/^\/team/)
+                  ? 'navbar-selected block'
+                  : 'navbar-no-selected block'
+              }
+            >
+              Team
+            </div>
+          </Link>
+          <Link href="/projects">
+            <div
+              className={
+                router.pathname.match(/^\/projects/)
+                  ? 'navbar-selected block'
+                  : 'navbar-no-selected block'
+              }
+            >
+              Projects
+            </div>
+          </Link>
+          <Link href="/calendar">
+            <div
+              className={
+                router.pathname.match(/^\/calendar/)
+                  ? 'navbar-selected block'
+                  : 'navbar-no-selected block'
+              }
+            >
+              Calendar
+            </div>
+          </Link>
         </div>
       </div>
     </nav>

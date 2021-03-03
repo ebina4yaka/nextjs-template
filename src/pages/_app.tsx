@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { ReactElement, useEffect } from 'react'
-import Head from 'next/head'
 import { AppProps } from 'next/app'
 import '../styles/globals.css'
 
@@ -16,16 +15,5 @@ export default function MyApp(props: AppProps): ReactElement {
     }
   }, [])
 
-  return (
-    <>
-      <Head>
-        <title>App</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  )
+  return <Component {...pageProps} />
 }
