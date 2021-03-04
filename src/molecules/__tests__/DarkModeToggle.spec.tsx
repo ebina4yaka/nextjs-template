@@ -1,20 +1,8 @@
 import renderer from 'react-test-renderer'
 import { fireEvent, render, queryByAttribute } from '@testing-library/react'
+import { renderHook, act } from '@testing-library/react-hooks'
 import DarkModeToggle from '../DarkModeToggle'
-
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-})
+import useDarkMode, { darkModeContext } from '../../context/useDarkMode'
 
 const getById = queryByAttribute.bind(null, 'id')
 
@@ -24,16 +12,25 @@ it('Snapshot test for DarkModeToggle', () => {
 })
 
 it('checkbox test for DarkModeToggle', () => {
-  const dom = render(<DarkModeToggle />)
+  const { result } = renderHook(() => useDarkMode())
+  const dom = render(
+    <darkModeContext.Provider value={result.current}>
+      <DarkModeToggle />
+    </darkModeContext.Provider>
+  )
 
   const input = getById(dom.container, 'toggle') as HTMLInputElement
 
-  expect(input.checked).toEqual(false)
   expect(document.documentElement.classList.contains('dark')).toEqual(false)
-  fireEvent.click(input)
-  expect(input.checked).toEqual(true)
+  expect(result.current.darkMode).toEqual(false)
+  act(() => {
+    fireEvent.click(input)
+  })
   expect(document.documentElement.classList.contains('dark')).toEqual(true)
-  fireEvent.click(input)
-  expect(input.checked).toEqual(false)
+  expect(result.current.darkMode).toEqual(true)
+  act(() => {
+    fireEvent.click(input)
+  })
   expect(document.documentElement.classList.contains('dark')).toEqual(false)
+  expect(result.current.darkMode).toEqual(false)
 })

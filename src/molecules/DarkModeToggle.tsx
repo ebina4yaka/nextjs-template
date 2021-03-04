@@ -1,22 +1,9 @@
-import { ReactElement, useEffect, useState } from 'react'
+import { ReactElement, useContext } from 'react'
+import { darkModeContext } from '../context/useDarkMode'
 
 export default function DarkModeToggle(): ReactElement {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
-      setDarkMode(true)
-    } else {
-      document.documentElement.classList.remove('dark')
-      setDarkMode(false)
-    }
-  }, [])
-
+  const context = useContext(darkModeContext)
+  const { darkMode, setDarkMode } = context
   const handleChange = () => {
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark')
